@@ -37,6 +37,9 @@ class ParticleFilter {
 	
 	// Vector of weights of all particles
 	std::vector<double> weights;
+
+	// Random engine
+	std::default_random_engine dre;
 	
 public:
 	
