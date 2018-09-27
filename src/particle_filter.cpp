@@ -79,9 +79,8 @@ void ParticleFilter::dataAssociation(std::vector<LandmarkObs> predicted, std::ve
 
     for (size_t i = 0; i < predicted.size(); ++i) {
 
-        double min_dist = numeric_limits<double>::max();
+        double min_dist = std::numeric_limits<double>::max();
         int id = -1;
-
         for (size_t j = 0; j < observations.size(); ++j) {
             double distance = dist(predicted[i].x, predicted[i].y, observations[j].x, observations[j].y);
             if (distance < min_dist) {
